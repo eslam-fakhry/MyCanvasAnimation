@@ -2,10 +2,10 @@
     var CIRCLE_RADIUS = 10
     var LINE_WIDTH = 2
     var CIRCLE_SPACING = 80
-    var BACKGROUND_COLOR = "#000117"
+    // var BACKGROUND_COLOR = "#071237"
     var GRID_COLOR = "#0B184F"
     var ANIMATION_DURATION = 40
-    var DEFAULT_TRAVEL_DISTANCE = 8
+    var DEFAULT_TRAVEL_DISTANCE = 4
     var ANIMATED_LINE_WIDTH = 1
     var ANIMATED_CIRCLE_RADIUS = 5
     var ANIMATED_CIRCLE_COLOR = "#ecba3d"
@@ -187,7 +187,7 @@
                 })
             }
             var direction = options[randIntBetween(0, options.length)]
-
+            if (!direction) return;
             if (direction.includes('up')) {
                 yCoefficient = -1
             } else if (direction.includes('down')) {
